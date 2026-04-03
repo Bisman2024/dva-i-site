@@ -1,38 +1,238 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Лестницы на заказ в Селятино | Два И</title>
-<meta name="description" content="Изготавливаем лестницы на заказ в Селятино. Деревянные, современные и классические решения под ключ. Столярный цех Два И.">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="theme-color" content="#120e0b" />
+  <title>Лестницы на заказ в Селятино | Столярный цех «Два И»</title>
+  <meta name="description" content="Лестницы на заказ в Селятино под ключ: деревянные, современные, классические, на металлокаркасе. Столярный цех «Два И»." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://www.dva-i.ru/лестницы-на-заказ-в-селятино.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <style>
+
+    :root{
+      --bg:#120e0b;
+      --bg-soft:#1b1511;
+      --card:rgba(255,255,255,.04);
+      --text:#f5efe8;
+      --muted:#b9ada1;
+      --line:rgba(255,255,255,.08);
+      --accent:#c97a2b;
+      --accent-hover:#df954a;
+      --max:#5865F2;
+      --max-hover:#4752C4;
+      --gold:#efc17a;
+      --shadow:0 20px 60px rgba(0,0,0,.35);
+      --radius:24px;
+      --radius-lg:32px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{
+      margin:0;
+      color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(201,122,43,.16), transparent 24%),
+        radial-gradient(circle at left center, rgba(120,53,15,.14), transparent 20%),
+        var(--bg);
+      overflow-x:hidden;
+      text-rendering:optimizeLegibility;
+    }
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(1200px, calc(100% - 32px));margin:0 auto}
+    .header{
+      position:sticky;top:0;z-index:100;
+      backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      background:rgba(18,14,11,.86);
+      border-bottom:1px solid var(--line);
+    }
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px;padding:10px 0}
+    .brand-title{font-size:20px;font-weight:700;line-height:1.1}
+    .brand-sub{margin-top:4px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+    .nav{display:flex;align-items:center;gap:28px;color:var(--muted);font-size:14px;flex-wrap:wrap}
+    .nav a:hover{color:#fff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 18px;border-radius:16px;border:1px solid transparent;cursor:pointer;transition:.2s ease;text-align:center;font-weight:600;white-space:nowrap}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{background:var(--accent-hover)}
+    .btn-secondary{background:rgba(255,255,255,.04);border-color:var(--line);color:#fff}.btn-secondary:hover{background:rgba(255,255,255,.08)}
+    .btn-max{background:var(--max);color:#fff}.btn-max:hover{background:var(--max-hover)}
+    .hero{padding:56px 0 24px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+    .badge{display:inline-flex;align-items:center;padding:10px 14px;border:1px solid rgba(201,122,43,.35);background:rgba(201,122,43,.1);color:var(--gold);border-radius:999px;font-size:14px;line-height:1.2}
+    h1{margin:18px 0 0;font-size:52px;line-height:1.05;letter-spacing:-.03em}
+    h2{margin:0;font-size:36px;line-height:1.1;letter-spacing:-.03em}
+    h3{margin:0;font-size:24px;line-height:1.2}
+    .lead{margin:22px 0 0;color:var(--muted);font-size:18px;line-height:1.8}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero-photo{overflow:hidden}
+    .hero-photo img{width:100%;height:100%;min-height:340px;object-fit:cover}
+    section{padding:24px 0}
+    .section-head{max-width:760px;margin-bottom:22px}
+    .section-label{text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--gold);margin-bottom:10px}
+    .section-text{margin-top:14px;color:var(--muted);line-height:1.8;font-size:16px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .feature-card{padding:24px}
+    .feature-card p,.text-card p{margin:14px 0 0;color:var(--muted);line-height:1.8;font-size:15px}
+    .text-card{padding:28px}
+    .bullets{display:grid;gap:12px;margin-top:18px}
+    .bullet{display:flex;gap:12px;align-items:flex-start}
+    .check{flex:0 0 26px;width:26px;height:26px;border-radius:999px;display:grid;place-items:center;background:rgba(201,122,43,.12);color:var(--gold);font-size:14px;margin-top:2px}
+    .cta-box{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;padding:30px;border-radius:32px;border:1px solid rgba(201,122,43,.22);background:linear-gradient(135deg, rgba(201,122,43,.12), rgba(255,255,255,.03));box-shadow:var(--shadow);align-items:start}
+    .cta-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+    .contact-card{padding:24px}
+    .contact-list{display:grid;gap:18px}
+    .contact-row{display:flex;gap:14px;align-items:flex-start}
+    .contact-icon{width:44px;height:44px;border-radius:16px;display:grid;place-items:center;background:rgba(201,122,43,.12);color:var(--gold);font-size:20px;flex:0 0 44px}
+    .contact-label{color:var(--muted);font-size:14px}
+    .contact-value{margin-top:6px;color:#fff;font-size:18px;line-height:1.6;word-break:break-word}
+    .footer{margin-top:20px;border-top:1px solid var(--line);background:rgba(0,0,0,.16)}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:24px 0;color:var(--muted);font-size:14px}
+    .footer-contacts{display:flex;flex-wrap:wrap;gap:18px}
+    @media (max-width:1100px){
+      .hero-grid,.grid-2,.cta-box{grid-template-columns:1fr}
+      h1{font-size:44px} h2{font-size:32px}
+    }
+    @media (max-width:760px){
+      .nav{display:none}
+      .header-inner{min-height:64px}
+      .container{width:min(100% - 24px, 1200px)}
+      h1{font-size:34px;line-height:1.08} h2{font-size:28px;line-height:1.15}
+      .lead,.section-text{font-size:15px;line-height:1.7}
+      .hero-actions,.cta-actions{flex-direction:column;align-items:stretch}
+      .hero-actions .btn,.cta-actions .btn{width:100%}
+      .footer-inner{flex-direction:column;align-items:flex-start}
+      .footer-contacts{flex-direction:column;gap:10px}
+    }
+
+  </style>
 </head>
 <body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html">
+        <div class="brand-title">Два И</div>
+        <div class="brand-sub">Столярный цех</div>
+      </a>
+      <nav class="nav">
+        <a href="index.html#services">Услуги</a>
+        <a href="index.html#portfolio">Работы</a>
+        <a href="index.html#contact">Контакты</a>
+      </nav>
+      <a class="btn btn-primary" href="index.html#contact">Связаться</a>
+    </div>
+  </header>
 
-<h1>Лестницы на заказ в Селятино</h1>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">Лестницы для частных домов и интерьеров</div>
+          <h1>Лестницы на заказ в Селятино под ключ</h1>
+          <p class="lead">Столярный цех «Два И» изготавливает лестницы на заказ под конкретный интерьер и размеры помещения. Делаем надёжные конструкции, аккуратную отделку, подбираем стиль под дом и доводим проект до готового результата.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:+79037473501">Позвонить</a>
+            <a class="btn btn-max" href="https://max.ru/join/Zq-9N4RTBYJMVl6TxCDKZY0gy0aWRK40tnIHAjQlKeY" target="_blank" rel="noopener">Написать в Max</a>
+            <a class="btn btn-secondary" href="index.html#portfolio">Посмотреть работы</a>
+          </div>
+        </div>
+        <div class="card hero-photo">
+          <img src="images/full/stairs-modern.jpg" alt="Современная деревянная лестница на заказ">
+        </div>
+      </div>
+    </section>
 
-<p>
-Столярный цех «Два И» изготавливает лестницы на заказ под ключ.
-Мы создаём надёжные и красивые конструкции для частных домов и интерьеров.
-</p>
 
-<h2>Какие лестницы мы делаем</h2>
-<ul>
-<li>Деревянные лестницы</li>
-<li>Лестницы на металлокаркасе</li>
-<li>Современные и классические</li>
-<li>С подсветкой и стеклом</li>
-</ul>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">Что делаем</div>
+          <h2>Какие лестницы мы изготавливаем</h2>
+          <div class="section-text">Работаем с классическими, современными и нестандартными решениями. Изготавливаем лестницы под жилые дома, коттеджи, двухсветные пространства и интерьеры с высокими требованиями к внешнему виду.</div>
+        </div>
+        <div class="grid-2">
+          <div class="card text-card">
+            <h3>Основные виды</h3>
+            <p>Подбираем конструкцию под планировку, высоту этажа и стиль интерьера. Можно реализовать как спокойную классику, так и более современное решение.</p>
+            <div class="bullets">
+              <div class="bullet"><div class="check">✓</div><div>Деревянные лестницы</div></div><div class="bullet"><div class="check">✓</div><div>Лестницы на металлокаркасе</div></div><div class="bullet"><div class="check">✓</div><div>Классические и современные модели</div></div><div class="bullet"><div class="check">✓</div><div>Варианты со стеклом, подсветкой и декоративными элементами</div></div>
+            </div>
+          </div>
+          <div class="card text-card">
+            <h3>Что получает заказчик</h3>
+            <p>Мы не просто делаем каркас и ступени. Важны точная геометрия, внешний вид, безопасность и аккуратная отделка каждой детали.</p>
+            <div class="bullets">
+              <div class="bullet"><div class="check">✓</div><div>Под размеры конкретного помещения</div></div><div class="bullet"><div class="check">✓</div><div>Подбор материала и отделки</div></div><div class="bullet"><div class="check">✓</div><div>Аккуратный монтаж и подгонка</div></div><div class="bullet"><div class="check">✓</div><div>Результат, который выглядит дорого и служит долго</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<h2>Почему выбирают нас</h2>
-<ul>
-<li>Работа под размеры</li>
-<li>Реальные проекты</li>
-<li>Качественные материалы</li>
-<li>Изготовление под ключ</li>
-</ul>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">Почему мы</div>
+          <h2>Почему выбирают «Два И»</h2>
+          <div class="section-text">На главной странице и в портфолио — реальные фотографии выполненных лестниц. Это не стоковые картинки, а настоящие объекты цеха.</div>
+        </div>
+        <div class="grid-2">
+          <div class="card text-card">
+            <h3>Наш подход</h3>
+            <p>Можно прислать пример лестницы, фото интерьера или просто описать задачу. Мы предложим рабочее решение и сориентируем по стоимости.</p>
+            <div class="bullets">
+              <div class="bullet"><div class="check">✓</div><div>Реальные объекты и реальные фото</div></div><div class="bullet"><div class="check">✓</div><div>Работа под заказ, а не шаблон</div></div><div class="bullet"><div class="check">✓</div><div>Понятный процесс без лишней сложности</div></div><div class="bullet"><div class="check">✓</div><div>Индивидуальный подход к деталям</div></div>
+            </div>
+          </div>
+          <div class="card text-card">
+            <h3>Для каких задач подойдёт</h3>
+            <p>Если вам нужна лестница в дом, на бетонный или металлический каркас, с ограждением, балясинами или современными стойками — такой проект можно обсудить с нами.</p>
+            <div class="bullets">
+              <div class="bullet"><div class="check">✓</div><div>Новые частные дома</div></div><div class="bullet"><div class="check">✓</div><div>Реконструкция и замена лестницы</div></div><div class="bullet"><div class="check">✓</div><div>Отделка лестниц на готовом каркасе</div></div><div class="bullet"><div class="check">✓</div><div>Нестандартные и премиальные проекты</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<a href="index.html">← На главную</a>
 
+    <section>
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <div class="section-label">Обсудим заказ</div>
+            <h2>Обсудим вашу лестницу</h2>
+            <div class="section-text">Напишите или позвоните, чтобы обсудить размеры, материал, сроки и желаемый стиль. Можно отправить фото, эскиз или пример — мы предложим рабочее решение под ваш объект.</div>
+            <div class="cta-actions">
+              <a class="btn btn-primary" href="tel:+79037473501">Позвонить</a>
+              <a class="btn btn-secondary" href="mailto:s.dva-i@mail.ru">Написать на почту</a>
+              <a class="btn btn-max" href="https://max.ru/join/Zq-9N4RTBYJMVl6TxCDKZY0gy0aWRK40tnIHAjQlKeY" target="_blank" rel="noopener">Написать в Max</a>
+            </div>
+          </div>
+          <div class="card contact-card">
+            <div class="contact-list">
+              <div class="contact-row"><div class="contact-icon">📞</div><div><div class="contact-label">Телефоны</div><div class="contact-value">+7-903-747-35-01<br>+7-926-708-77-62</div></div></div>
+              <div class="contact-row"><div class="contact-icon">✉️</div><div><div class="contact-label">Электронная почта</div><div class="contact-value">s.dva-i@mail.ru</div></div></div>
+              <div class="contact-row"><div class="contact-icon">💬</div><div><div class="contact-label">Max</div><div class="contact-value">Можно перейти по кнопке или открыть главную страницу и отсканировать QR-код.</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><b style="color:#fff">Два И</b> — столярный цех. Все виды столярных и плотницких работ.</div>
+      <div class="footer-contacts">
+        <a href="tel:+79037473501">+7-903-747-35-01</a>
+        <a href="tel:+79267087762">+7-926-708-77-62</a>
+        <a href="mailto:s.dva-i@mail.ru">s.dva-i@mail.ru</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

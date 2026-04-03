@@ -1,35 +1,238 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Столярные работы в Селятино | Два И</title>
-<meta name="description" content="Все виды столярных и плотницких работ в Селятино: отделка, лестницы, мебель, конструкции из дерева.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="theme-color" content="#120e0b" />
+  <title>Столярные и плотницкие работы в Селятино | Столярный цех «Два И»</title>
+  <meta name="description" content="Столярные и плотницкие работы в Селятино: отделка деревом, двери, окна, перегородки, ниши, фасадные элементы и любые изделия из дерева." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://www.dva-i.ru/столярные-и-плотницкие-работы-в-селятино.html" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <style>
+
+    :root{
+      --bg:#120e0b;
+      --bg-soft:#1b1511;
+      --card:rgba(255,255,255,.04);
+      --text:#f5efe8;
+      --muted:#b9ada1;
+      --line:rgba(255,255,255,.08);
+      --accent:#c97a2b;
+      --accent-hover:#df954a;
+      --max:#5865F2;
+      --max-hover:#4752C4;
+      --gold:#efc17a;
+      --shadow:0 20px 60px rgba(0,0,0,.35);
+      --radius:24px;
+      --radius-lg:32px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{
+      margin:0;
+      color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(201,122,43,.16), transparent 24%),
+        radial-gradient(circle at left center, rgba(120,53,15,.14), transparent 20%),
+        var(--bg);
+      overflow-x:hidden;
+      text-rendering:optimizeLegibility;
+    }
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(1200px, calc(100% - 32px));margin:0 auto}
+    .header{
+      position:sticky;top:0;z-index:100;
+      backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      background:rgba(18,14,11,.86);
+      border-bottom:1px solid var(--line);
+    }
+    .header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px;padding:10px 0}
+    .brand-title{font-size:20px;font-weight:700;line-height:1.1}
+    .brand-sub{margin-top:4px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+    .nav{display:flex;align-items:center;gap:28px;color:var(--muted);font-size:14px;flex-wrap:wrap}
+    .nav a:hover{color:#fff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 18px;border-radius:16px;border:1px solid transparent;cursor:pointer;transition:.2s ease;text-align:center;font-weight:600;white-space:nowrap}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{background:var(--accent-hover)}
+    .btn-secondary{background:rgba(255,255,255,.04);border-color:var(--line);color:#fff}.btn-secondary:hover{background:rgba(255,255,255,.08)}
+    .btn-max{background:var(--max);color:#fff}.btn-max:hover{background:var(--max-hover)}
+    .hero{padding:56px 0 24px}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+    .badge{display:inline-flex;align-items:center;padding:10px 14px;border:1px solid rgba(201,122,43,.35);background:rgba(201,122,43,.1);color:var(--gold);border-radius:999px;font-size:14px;line-height:1.2}
+    h1{margin:18px 0 0;font-size:52px;line-height:1.05;letter-spacing:-.03em}
+    h2{margin:0;font-size:36px;line-height:1.1;letter-spacing:-.03em}
+    h3{margin:0;font-size:24px;line-height:1.2}
+    .lead{margin:22px 0 0;color:var(--muted);font-size:18px;line-height:1.8}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero-photo{overflow:hidden}
+    .hero-photo img{width:100%;height:100%;min-height:340px;object-fit:cover}
+    section{padding:24px 0}
+    .section-head{max-width:760px;margin-bottom:22px}
+    .section-label{text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--gold);margin-bottom:10px}
+    .section-text{margin-top:14px;color:var(--muted);line-height:1.8;font-size:16px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .feature-card{padding:24px}
+    .feature-card p,.text-card p{margin:14px 0 0;color:var(--muted);line-height:1.8;font-size:15px}
+    .text-card{padding:28px}
+    .bullets{display:grid;gap:12px;margin-top:18px}
+    .bullet{display:flex;gap:12px;align-items:flex-start}
+    .check{flex:0 0 26px;width:26px;height:26px;border-radius:999px;display:grid;place-items:center;background:rgba(201,122,43,.12);color:var(--gold);font-size:14px;margin-top:2px}
+    .cta-box{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;padding:30px;border-radius:32px;border:1px solid rgba(201,122,43,.22);background:linear-gradient(135deg, rgba(201,122,43,.12), rgba(255,255,255,.03));box-shadow:var(--shadow);align-items:start}
+    .cta-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+    .contact-card{padding:24px}
+    .contact-list{display:grid;gap:18px}
+    .contact-row{display:flex;gap:14px;align-items:flex-start}
+    .contact-icon{width:44px;height:44px;border-radius:16px;display:grid;place-items:center;background:rgba(201,122,43,.12);color:var(--gold);font-size:20px;flex:0 0 44px}
+    .contact-label{color:var(--muted);font-size:14px}
+    .contact-value{margin-top:6px;color:#fff;font-size:18px;line-height:1.6;word-break:break-word}
+    .footer{margin-top:20px;border-top:1px solid var(--line);background:rgba(0,0,0,.16)}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:24px 0;color:var(--muted);font-size:14px}
+    .footer-contacts{display:flex;flex-wrap:wrap;gap:18px}
+    @media (max-width:1100px){
+      .hero-grid,.grid-2,.cta-box{grid-template-columns:1fr}
+      h1{font-size:44px} h2{font-size:32px}
+    }
+    @media (max-width:760px){
+      .nav{display:none}
+      .header-inner{min-height:64px}
+      .container{width:min(100% - 24px, 1200px)}
+      h1{font-size:34px;line-height:1.08} h2{font-size:28px;line-height:1.15}
+      .lead,.section-text{font-size:15px;line-height:1.7}
+      .hero-actions,.cta-actions{flex-direction:column;align-items:stretch}
+      .hero-actions .btn,.cta-actions .btn{width:100%}
+      .footer-inner{flex-direction:column;align-items:flex-start}
+      .footer-contacts{flex-direction:column;gap:10px}
+    }
+
+  </style>
 </head>
 <body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html">
+        <div class="brand-title">Два И</div>
+        <div class="brand-sub">Столярный цех</div>
+      </a>
+      <nav class="nav">
+        <a href="index.html#services">Услуги</a>
+        <a href="index.html#portfolio">Работы</a>
+        <a href="index.html#contact">Контакты</a>
+      </nav>
+      <a class="btn btn-primary" href="index.html#contact">Связаться</a>
+    </div>
+  </header>
 
-<h1>Столярные работы в Селятино</h1>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge">От отделки до сложных изделий из дерева</div>
+          <h1>Столярные и плотницкие работы в Селятино</h1>
+          <p class="lead">Выполняем столярные и плотницкие работы под заказ: отделка деревом, перегородки, ниши, двери, окна, фасадные элементы и нестандартные изделия. Работаем по индивидуальным задачам, когда нужен не шаблон, а точное решение под объект.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:+79037473501">Позвонить</a>
+            <a class="btn btn-max" href="https://max.ru/join/Zq-9N4RTBYJMVl6TxCDKZY0gy0aWRK40tnIHAjQlKeY" target="_blank" rel="noopener">Написать в Max</a>
+            <a class="btn btn-secondary" href="index.html#portfolio">Посмотреть работы</a>
+          </div>
+        </div>
+        <div class="card hero-photo">
+          <img src="images/full/yacht-finishing.jpg" alt="Столярные и плотницкие работы по дереву">
+        </div>
+      </div>
+    </section>
 
-<p>
-Выполняем любые столярные и плотницкие работы:
-от отделки до сложных конструкций.
-</p>
 
-<h2>Услуги</h2>
-<ul>
-<li>Отделка деревом</li>
-<li>Перегородки и ниши</li>
-<li>Двери и окна</li>
-<li>Фасадные элементы</li>
-</ul>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">Услуги</div>
+          <h2>Какие работы выполняем</h2>
+          <div class="section-text">Берёмся за разные задачи по дереву — от интерьерной отделки до фасадных элементов и сложных нестандартных проектов.</div>
+        </div>
+        <div class="grid-2">
+          <div class="card text-card">
+            <h3>Для интерьера</h3>
+            <p>Помогаем там, где важны точная подгонка, чистая геометрия и красивый внешний вид готового результата.</p>
+            <div class="bullets">
+              <div class="bullet"><div class="check">✓</div><div>Отделка деревом</div></div><div class="bullet"><div class="check">✓</div><div>Реечные конструкции</div></div><div class="bullet"><div class="check">✓</div><div>Ниши и перегородки</div></div><div class="bullet"><div class="check">✓</div><div>Двери и интерьерные элементы</div></div>
+            </div>
+          </div>
+          <div class="card text-card">
+            <h3>Для дома и фасада</h3>
+            <p>Делаем конструкции и элементы, которые работают не только как декоративное решение, но и как практичная часть объекта.</p>
+            <div class="bullets">
+              <div class="bullet"><div class="check">✓</div><div>Окна и обрамления</div></div><div class="bullet"><div class="check">✓</div><div>Фасадные элементы</div></div><div class="bullet"><div class="check">✓</div><div>Ставни и наружные детали</div></div><div class="bullet"><div class="check">✓</div><div>Изделия для бань, беседок и зон отдыха</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<h2>Под заказ</h2>
-<p>
-Работаем по индивидуальным проектам.
-Любые изделия из дерева.
-</p>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="section-label">Формат работы</div>
+          <h2>Под заказ, а не по шаблону</h2>
+          <div class="section-text">Если есть нестандартная задача, её можно обсудить. Часто именно такие проекты дают лучший результат: когда изделие собирается под помещение, стиль и конкретную функцию.</div>
+        </div>
+        <div class="grid-2">
+          <div class="card text-card">
+            <h3>Как начать</h3>
+            <p>Пришлите фото, размеры, пример или просто опишите задачу. Этого уже достаточно, чтобы понять направление и предложить решение.</p>
+            <div class="bullets">
+              <div class="bullet"><div class="check">✓</div><div>Можно начать с фото объекта</div></div><div class="bullet"><div class="check">✓</div><div>Подходят эскизы и примеры</div></div><div class="bullet"><div class="check">✓</div><div>Сориентируем по материалам</div></div><div class="bullet"><div class="check">✓</div><div>Объясним, как лучше реализовать</div></div>
+            </div>
+          </div>
+          <div class="card text-card">
+            <h3>Почему это удобно</h3>
+            <p>Вместо долгих поисков готового варианта вы получаете вещь, которая сразу подходит по размеру, внешнему виду и задаче.</p>
+            <div class="bullets">
+              <div class="bullet"><div class="check">✓</div><div>Индивидуальное решение</div></div><div class="bullet"><div class="check">✓</div><div>Экономия времени на поиске</div></div><div class="bullet"><div class="check">✓</div><div>Аккуратное исполнение</div></div><div class="bullet"><div class="check">✓</div><div>Цельный и дорогой вид результата</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<a href="index.html">← На главную</a>
 
+    <section>
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <div class="section-label">Обсудим заказ</div>
+            <h2>Обсудим столярные работы под вашу задачу</h2>
+            <div class="section-text">Напишите или позвоните, чтобы обсудить размеры, материал, сроки и желаемый стиль. Можно отправить фото, эскиз или пример — мы предложим рабочее решение под ваш объект.</div>
+            <div class="cta-actions">
+              <a class="btn btn-primary" href="tel:+79037473501">Позвонить</a>
+              <a class="btn btn-secondary" href="mailto:s.dva-i@mail.ru">Написать на почту</a>
+              <a class="btn btn-max" href="https://max.ru/join/Zq-9N4RTBYJMVl6TxCDKZY0gy0aWRK40tnIHAjQlKeY" target="_blank" rel="noopener">Написать в Max</a>
+            </div>
+          </div>
+          <div class="card contact-card">
+            <div class="contact-list">
+              <div class="contact-row"><div class="contact-icon">📞</div><div><div class="contact-label">Телефоны</div><div class="contact-value">+7-903-747-35-01<br>+7-926-708-77-62</div></div></div>
+              <div class="contact-row"><div class="contact-icon">✉️</div><div><div class="contact-label">Электронная почта</div><div class="contact-value">s.dva-i@mail.ru</div></div></div>
+              <div class="contact-row"><div class="contact-icon">💬</div><div><div class="contact-label">Max</div><div class="contact-value">Можно перейти по кнопке или открыть главную страницу и отсканировать QR-код.</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><b style="color:#fff">Два И</b> — столярный цех. Все виды столярных и плотницких работ.</div>
+      <div class="footer-contacts">
+        <a href="tel:+79037473501">+7-903-747-35-01</a>
+        <a href="tel:+79267087762">+7-926-708-77-62</a>
+        <a href="mailto:s.dva-i@mail.ru">s.dva-i@mail.ru</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
